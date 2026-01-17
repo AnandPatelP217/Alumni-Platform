@@ -1,0 +1,214 @@
+/* Hero Slider Section */
+.hero-slider {
+    position: relative;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Carousel Base Styles */
+  .carousel {
+    height: 90vh;
+    max-height: 800px;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    height: 100%;
+ 
+      background-color: white; /* Add this to ensure white background */
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .carousel-item {
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .slider-link {
+    display: block;
+    height: 100%;
+    position: relative;
+  }
+  
+  .slider-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: transform 8s ease-out;
+  }
+  
+  .carousel-item.active .slider-image {
+    transform: scale(1.05);
+  }
+  
+  /* Caption Styles */
+  .carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 25%;
+    left: 15%;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    text-align: left;
+    max-width: 600px;
+    transition: all 0.5s ease;
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  
+  .carousel-item.active .carousel-caption {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .slider-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .slider-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+  }
+  
+  .slider-btn {
+    background: linear-gradient(45deg, #8c6700, #d4a600);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .slider-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #d4a600, #ffd700);
+  }
+  
+  /* Indicators */
+  .carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .carousel-indicators button.active {
+    background-color: #d4a600;
+    transform: scale(1.2);
+  }
+  
+  /* Navigation Arrows */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .carousel:hover .carousel-control-prev,
+  .carousel:hover .carousel-control-next {
+    opacity: 1;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+  }
+  
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    background-color: rgba(140, 103, 0, 0.8);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .carousel {
+      height: 70vh;
+    }
+    
+    .carousel-caption {
+      bottom: 15%;
+      max-width: 80%;
+    }
+    
+    .slider-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel {
+      height: 60vh;
+    }
+    
+    .carousel-caption {
+      padding: 20px;
+      bottom: 10%;
+    }
+    
+    .slider-title {
+      font-size: 1.8rem;
+    }
+    
+    .slider-subtitle {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .carousel {
+      height: 50vh;
+    }
+    
+    .carousel-caption {
+      padding: 15px;
+      bottom: 5%;
+      left: 10%;
+      right: 10%;
+    }
+    
+    .slider-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .slider-btn {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+  }

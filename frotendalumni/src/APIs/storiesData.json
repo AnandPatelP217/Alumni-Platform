@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "bio": "John is a software engineer at XYZ company. He graduated in 2010 with a degree in Computer Science.",
+    "graduationYear": "2010",
+    "profession": "Software Engineer",
+    "pakage": "25 Lakh",
+    "image": "https://media.istockphoto.com/id/1151567114/photo/a-young-female-graduate-against-the-background-of-university-graduates.jpg?s=612x612&w=0&k=20&c=zAFyR9UEbOWLOXqdNQSItVxVxOrjhOvwkfms-TyigA4="
+  },
+  {
+    "id": 2,
+    "name": "Hari Kamde",
+    "bio": "Jane is a data scientist at ABC Corp. She graduated in 2012 with a degree in Data Science.",
+    "graduationYear": "2012",
+    "profession": "Data Scientist",
+    "pakage": "25/- Lakh",
+    "image": "https://media.gettyimages.com/id/1496195396/photo/portrait-of-young-graduate-woman-on-her-graduation.jpg?s=612x612&w=gi&k=20&c=U97vt3E5q1IBQ_uWvJJmjLM1tx6a16gXcdvlMeRP-WQ="
+  },
+  {
+    "id": 3,
+    "name": "John Wick",
+    "bio": "Jane is a dadccfdcfdta scientist at ABC Corp. She graduated in 2012 with a degree in Data Science.",
+    "graduationYear": "201xs2",
+    "profession": "Data Sciesxsntist",
+    "pakage": "25 Lakh",
+    "image": "https://www.concordia.edu/blog/images/CTX_Graduation_Social.jpg"
+  }
+ 
+]

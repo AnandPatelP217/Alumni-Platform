@@ -1,0 +1,15 @@
+[
+    {
+      "title": "Sample News 1",
+      "description": "This is a sample news article 1.",
+      "urlToImage": "https://example.com/image1.jpg",
+      "url": "https://example.com/news1"
+    },
+    {
+      "title": "Sample News 2",
+      "description": "This is a sample news article 2.",
+      "urlToImage": "https://example.com/image2.jpg",
+      "url": "https://example.com/news2"
+    }
+  ]
+  

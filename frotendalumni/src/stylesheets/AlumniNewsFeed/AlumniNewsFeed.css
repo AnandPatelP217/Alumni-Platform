@@ -1,0 +1,146 @@
+.alumni-news-container {
+  margin:30px 0 0 0; 
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.alumni-news-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(140, 103, 0);
+  margin-bottom: 1rem;
+}
+
+.section-divider {
+  width: 80px;
+  height: 4px;
+  background-color: rgb(140, 103, 0);
+  margin: 0 auto 1.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.alumni-news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.news-card.expanded {
+  grid-column: 1 / -1;
+}
+
+.news-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.news-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover .news-image {
+  transform: scale(1.05);
+}
+
+.news-date-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(140, 103, 0, 0.9);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.news-content {
+  padding: 1.5rem;
+}
+
+.news-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.news-description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-description.show-full {
+  -webkit-line-clamp: unset;
+}
+
+.news-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.read-more-btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background-color: rgb(140, 103, 0);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: rgba(140, 103, 0, 0.8);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .alumni-news-container {
+    padding: 2rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .alumni-news-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,83 @@
+.not-found-section {
+  min-height: calc(100vh - 5rem);
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.page-not-found-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.animation-container {
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+
+.lottie-animation {
+  width: 100%;
+  height: auto;
+}
+
+.text-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: rgb(140, 103, 0);
+  color: white;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.home-button:hover {
+  background-color: rgba(140, 103, 0, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .animation-container {
+    max-width: 300px;
+  }
+}

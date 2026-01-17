@@ -1,0 +1,80 @@
+/* ViewMeetings.css */
+
+.meetings-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
+  
+  .empty-state {
+    text-align: center;
+    color: #666;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .meetings-table-container {
+    overflow-y: auto;
+    height: 500px;
+    border: 2px solid rgb(140, 103, 0);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meetings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .meetings-table th {
+    padding: 14px 16px;
+    border-bottom: 2px solid rgb(140, 103, 0);
+    background-color: rgb(140, 103, 0);
+    color: #ffffff;
+    text-align: left;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .meetings-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+    color: #333;
+  }
+  
+  .meetings-table tr:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+  
+  .meetings-table tr:hover {
+    background-color: rgba(140, 103, 0, 0.05);
+  }
+  
+  .meetings-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .meetings-table-container {
+      height: auto;
+      max-height: 500px;
+    }
+    
+    .meetings-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }

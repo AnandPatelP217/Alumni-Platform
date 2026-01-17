@@ -1,0 +1,184 @@
+/* Main Section Styling */
+.web-counter-section {
+    background: linear-gradient(rgba(30, 29, 29, 0.8),rgba(40, 40, 40, 0.95)), 
+                url('https://www.sistec.ac.in/assets/web/images/home/home-counter-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Section Header */
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .section-header h2 {
+    color: rgb(255, 215, 140);
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  
+  /* Divider Styling */
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .divider-line {
+    width: 80px;
+    height: 2px;
+    background: rgb(140, 103, 0);
+    display: inline-block;
+  }
+  
+  .divider-icon {
+    color: rgb(140, 103, 0);
+    margin: 0 15px;
+    font-size: 18px;
+  }
+  
+  /* Counter Grid Layout */
+  .counter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  /* Counter Card Styling */
+  .counter-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(140, 103, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .counter-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, rgb(140, 103, 0), rgb(255, 215, 140));
+  }
+  
+  .counter-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    background: rgba(140, 103, 0, 0.15);
+  }
+  
+  .counter-icon img {
+    width: 70px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .counter-card:hover .counter-icon img {
+    transform: scale(1.1);
+  }
+  
+  .count-number {
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .plus-sign {
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 5px;
+    align-self: flex-start;
+  }
+  
+  .counter-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 15px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .counter-title::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: rgb(140, 103, 0);
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+  
+  .counter-card:hover .counter-title::after {
+    width: 60px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .counter-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .section-header h2 {
+      font-size: 36px;
+    }
+    
+    .counter-grid {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    .counter-card {
+      padding: 25px 15px;
+    }
+    
+    .count-number {
+      font-size: 36px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section-header h2 {
+      font-size: 28px;
+    }
+    
+    .section-subtitle {
+      font-size: 16px;
+    }
+  }
