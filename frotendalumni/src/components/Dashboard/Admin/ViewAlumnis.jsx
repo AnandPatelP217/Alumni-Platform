@@ -8,7 +8,6 @@ const ViewAlumnis = () => {
   const [filteredAlumnis, setFilteredAlumnis] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortCriteria, setSortCriteria] = useState("");
-  const [tableHeight] = useState(500);
 
   const authorizationToken = localStorage.getItem("token");
 
@@ -60,6 +59,7 @@ const ViewAlumnis = () => {
     if (authorizationToken) {
       getAllAlumniData();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [authorizationToken]);
 
   return (

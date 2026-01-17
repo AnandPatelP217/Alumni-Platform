@@ -9,7 +9,6 @@ const ViewStudents = () => {
   const [filteredStudents, setFilteredStudents] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortCriteria, setSortCriteria] = useState(""); // Sorting state
-  const [tableHeight] = useState(500); // Fixed table height for vertical scrolling
   
   const authorizationToken = localStorage.getItem("token");
   // Pagination states
@@ -68,6 +67,7 @@ const ViewStudents = () => {
   useEffect(() => {
     if(authorizationToken){
     getAllStudentData();}
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [authorizationToken]);
 
   // Get the current students based on pagination

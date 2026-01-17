@@ -36,6 +36,7 @@ const AddMeeting = () => {
     if (storedAlumniId) {
       setAlumniId(storedAlumniId);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [formData, setFormData] = useState({

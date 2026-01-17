@@ -44,6 +44,7 @@ const ViewMeetings = () => {
 
   useEffect(() => {
     getAllMeetingData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [authorizationToken]);
 
   const formatDate = (dateString) => {

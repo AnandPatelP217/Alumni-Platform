@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DashboardLayout from "../DashboardLayout";
 import "../../../stylesheets/Dashboard/ProfileSetting.css";
-import { Input, message } from "antd";
+import { message } from "antd";
 import { API_URL } from "../../../store/apiurl";
 
 const DeleteStudent = () => {

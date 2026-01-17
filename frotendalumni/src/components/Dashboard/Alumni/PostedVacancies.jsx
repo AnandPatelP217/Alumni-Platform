@@ -6,7 +6,6 @@ import '../../../stylesheets/Dashboard/CommonViewStyles.css';
 
 const PostedVacancies = () => {
   const [vacancies, setVacancies] = useState([]);
-  const [tableHeight] = useState(500);
   const [selectedVacancy, setSelectedVacancy] = useState(null);
   const [recommendedStudents, setRecommendedStudents] = useState([]);
   const [isModalVisible, setIsModalVisible] = useState(false); // For controlling the popup visibility

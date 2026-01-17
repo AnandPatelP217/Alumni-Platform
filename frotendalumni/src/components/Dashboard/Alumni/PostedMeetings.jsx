@@ -6,7 +6,6 @@ import '../../../stylesheets/Dashboard/CommonViewStyles.css';
 
 const PostedMeetings = () => {
   const [meeting, setmeeting] = useState([]);
-  const [tableHeight] = useState(500);
   const [selectedMeeting, setSelectedMeeting] = useState(null);
 
   const [updatedMeetingData, setUpdatedMeetingData] = useState({

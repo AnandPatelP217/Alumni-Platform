@@ -3,7 +3,7 @@ import axios from 'axios';
 import "./ForgotPassword.css"
 import { API_URL } from '../../store/apiurl';
 import { Button } from "antd";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
  
 const URL = `${API_URL}/api/v1/auth/send-reset-password-link`;

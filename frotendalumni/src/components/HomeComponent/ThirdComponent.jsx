@@ -29,6 +29,7 @@ const ThirdComponent = () => {
       }, 5000); // Slowed down to 5 seconds for better UX
     }
     return () => clearInterval(interval);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAutoPlaying, currentAlumIndex]);
 
   const currentAlum = storiesData[currentAlumIndex];

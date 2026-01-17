@@ -13,7 +13,6 @@ const ViewVacancies = () => {
   const [students, setStudents] = useState([]);
   const [selectedVacancy, setSelectedVacancy] = useState(null);
   const [matchingStudents, setMatchingStudents] = useState([]);
-  const [isAdminApproved, setIsAdminApproved] = useState(false);
   const [showApprovalModal, setShowApprovalModal] = useState(false);
   const authorizationToken = localStorage.getItem('token');
 
@@ -83,7 +82,6 @@ const ViewVacancies = () => {
   };
 
   const approveRequest = async () => {
-    setIsAdminApproved(true);
     setShowApprovalModal(false);
 
     try {
