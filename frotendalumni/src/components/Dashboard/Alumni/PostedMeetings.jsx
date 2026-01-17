@@ -223,116 +223,135 @@ const PostedMeetings = () => {
         )}
 
        {/* Update Form */}
-{selectedMeeting && (
-  <div style={updateFormStyle}>
-    <h3 style={formHeadingStyle}>Update Meeting</h3>
-    <form style={formStyle}>
-      <label style={labelStyle}>Title</label>
-      <input
-        type="text"
-        name="title"
-        value={updatedMeetingData.title}
-        onChange={handleInputChange}
-        placeholder="Enter meeting title"
-        style={inputStyle}
-      />
+        {selectedMeeting && (
+          <div className="view-form-container" style={{ marginTop: '30px', padding: '30px', background: '#f8f9fa', borderRadius: '12px' }}>
+            <h3 style={{ marginBottom: '25px', color: '#333', textAlign: 'center' }}>Update Meeting</h3>
+            <form style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <div>
+                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', color: '#555' }}>Title</label>
+                <input
+                  type="text"
+                  name="title"
+                  value={updatedMeetingData.title}
+                  onChange={handleInputChange}
+                  placeholder="Enter meeting title"
+                  className="form-control"
+                />
+              </div>
 
-      <label style={labelStyle}>Description</label>
-      <textarea
-        name="description"
-        value={updatedMeetingData.description}
-        onChange={handleInputChange}
-        placeholder="Enter meeting description"
-        style={textareaStyle}
-      />
+              <div>
+                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', color: '#555' }}>Description</label>
+                <textarea
+                  name="description"
+                  value={updatedMeetingData.description}
+                  onChange={handleInputChange}
+                  placeholder="Enter meeting description"
+                  className="form-control"
+                  rows="4"
+                />
+              </div>
 
-      <label style={labelStyle}>Date</label>
-      <input
-        type="date"
-        name="date"
-        value={updatedMeetingData.date.split("T")[0]} // Format date to YYYY-MM-DD
-        onChange={handleInputChange}
-        style={inputStyle}
-      />
+              <div>
+                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', color: '#555' }}>Date</label>
+                <input
+                  type="date"
+                  name="date"
+                  value={updatedMeetingData.date.split("T")[0]}
+                  onChange={handleInputChange}
+                  className="form-control"
+                />
+              </div>
 
-      <label style={labelStyle}>Time</label>
-      <input
-        type="time"
-        name="time"
-        value={updatedMeetingData.time}
-        onChange={handleInputChange}
-        style={inputStyle}
-      />
+              <div>
+                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', color: '#555' }}>Time</label>
+                <input
+                  type="time"
+                  name="time"
+                  value={updatedMeetingData.time}
+                  onChange={handleInputChange}
+                  className="form-control"
+                />
+              </div>
 
-      <label style={labelStyle}>Meeting URL</label>
-      <input
-        type="text"
-        name="url"
-        value={updatedMeetingData.url}
-        onChange={handleInputChange}
-        placeholder="Enter meeting URL"
-        style={inputStyle}
-      />
+              <div>
+                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', color: '#555' }}>Meeting URL</label>
+                <input
+                  type="text"
+                  name="url"
+                  value={updatedMeetingData.url}
+                  onChange={handleInputChange}
+                  placeholder="Enter meeting URL"
+                  className="form-control"
+                />
+              </div>
 
-      <label style={labelStyle}>Platform</label>
-      <input
-        type="text"
-        name="platform"
-        value={updatedMeetingData.platform}
-        onChange={handleInputChange}
-        placeholder="Enter meeting platform"
-        style={inputStyle}
-      />
+              <div>
+                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', color: '#555' }}>Platform</label>
+                <input
+                  type="text"
+                  name="platform"
+                  value={updatedMeetingData.platform}
+                  onChange={handleInputChange}
+                  placeholder="Enter meeting platform"
+                  className="form-control"
+                />
+              </div>
 
-      <label style={labelStyle}>Location</label>
-      <input
-        type="text"
-        name="location"
-        value={updatedMeetingData.location}
-        onChange={handleInputChange}
-        placeholder="Enter meeting location"
-        style={inputStyle}
-      />
+              <div>
+                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '600', color: '#555' }}>Location</label>
+                <input
+                  type="text"
+                  name="location"
+                  value={updatedMeetingData.location}
+                  onChange={handleInputChange}
+                  placeholder="Enter meeting location"
+                  className="form-control"
+                />
+              </div>
 
-      <h5 style={sectionHeadingStyle}>Give Meeting Feedback</h5>
-      <input
-        type="text"
-        name="feedback"
-        value={updatedMeetingData.feedback}
-        onChange={handleInputChange}
-        placeholder="Enter feedback"
-        style={inputStyle}
-      />
+              <div>
+                <h5 style={{ marginTop: '10px', marginBottom: '10px', color: '#333', fontWeight: '600' }}>Give Meeting Feedback</h5>
+                <input
+                  type="text"
+                  name="feedback"
+                  value={updatedMeetingData.feedback}
+                  onChange={handleInputChange}
+                  placeholder="Enter feedback"
+                  className="form-control"
+                />
+              </div>
 
-      <h5 style={sectionHeadingStyle}>Number of Total Students Attended</h5>
-      <input
-        type="number"
-        name="attendedstudent"
-        value={updatedMeetingData.attendedstudent}
-        onChange={handleInputChange}
-        placeholder="Enter number of students attended"
-        style={inputStyle}
-      />
+              <div>
+                <h5 style={{ marginTop: '10px', marginBottom: '10px', color: '#333', fontWeight: '600' }}>Number of Total Students Attended</h5>
+                <input
+                  type="number"
+                  name="attendedstudent"
+                  value={updatedMeetingData.attendedstudent}
+                  onChange={handleInputChange}
+                  placeholder="Enter number of students attended"
+                  className="form-control"
+                />
+              </div>
 
-      <div style={buttonContainerStyle}>
-        <button
-          type="button"
-          style={saveButtonStyle}
-          onClick={updateMeeting}
-        >
-          Save Changes
-        </button>
-        <button
-          type="button"
-          style={cancelButtonStyle}
-          onClick={() => setSelectedMeeting(null)}
-        >
-          Cancel
-        </button>
-      </div>
-    </form>
-  </div>
-)}
+              <div style={{ display: 'flex', gap: '15px', justifyContent: 'flex-end', marginTop: '20px' }}>
+                <button
+                  type="button"
+                  className="view-button view-button-primary"
+                  onClick={updateMeeting}
+                >
+                  Save Changes
+                </button>
+                <button
+                  type="button"
+                  className="view-button view-button-delete"
+                  onClick={() => setSelectedMeeting(null)}
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        )}
       </div>
     </DashboardLayout>
   );
